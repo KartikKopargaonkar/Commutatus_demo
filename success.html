@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title> JUSCO </title>
+<script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
+function myFunction4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<style>/* Dropdown Button */
+.dropbtn,.logoutLblPos {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+h1{
+    background-color: #3498DB;
+    font-weight: bold;
+    color: white;
+    
+}
+.logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:100px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>
+</head>
+<body>
+    <h1><center> JUSCO ASSETS MAIINTAINANCE SYSTEM </center></h1></br>
+   <div class="dropdown">
+
+  <button onclick="myFunction1()" class="dropbtn">ADMIN</button>
+  <div id="myDropdown1" class="dropdown-content">
+    <a href="input.html">USER MASTER</a>
+    <a href="change.html">NEW PASSWORD</a>
+    <a href="index.xhtml">CHANGE PASSWORD</a>
+  </div>
+           
+   <button onclick="myFunction2()" class="dropbtn">MASTER</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <a href="dept.html">DEPARTMENT</a>
+    <a href="sec.html">SECTION</a>
+    <a href="loc.hhtml">LOCATION</a>
+    <a href="equi.html">EQUIPMENT</a>
+</div>
+   <button onclick="myFunction3()" class="dropbtn">SCHEDULE</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <a href="pmsc.html">PM/LC SCHEDULE</a>
+    <a href="jobass.html">JOB ASSIGNMENT</a>
+    <a href="jobpen.html">JOB PENDING</a>
+    <a href="jobcom.html">JOB COMPLETION</a>
+</div>
+  <form align="right" name="form1" method="post" action="index.xhtml">
+  <label class="logoutLblPos">
+  <input name="submit2" type="submit" id="submit2" value="LOGOUT">
+  </label>
+</form>
+   
+</body>
+</html>
+    
